@@ -3,14 +3,14 @@ const { describe, it } = require('mocha')
 const calculate = require('./index')
 
 describe('HazyCalculator', () => {
-  it('multiplies two numbers when one is stringified', () => {
-    const calculationSteps = ['2', '*', 4]
+  it('multiplies two numbers when one is stringified', () => {    //make math expressions work: # (operator) #
+    const calculationSteps = ['2', '*', 4] 
 
     expect(calculate(calculationSteps)).to.equal(8)
   })
 
-  it('treats null values as zeroes and includes them in the calculation', () => {
-    const calculationSteps = [10, '+', null]
+  it('treats null values as zeroes and includes them in the calculation', () => {       // null => zero
+    const calculationSteps = [10, '+', null] 
 
     expect(calculate(calculationSteps)).to.equal(10)
   })
