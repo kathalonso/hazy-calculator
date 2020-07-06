@@ -9,8 +9,8 @@ The `calculate` function runs an arithmetic calculation based upon an array of i
 Each input should be either a number or an operand (`+`, `-`, `*`, `/`)
 
 Our upstream data is inconsistent, so we _intentionally_ accept it and deal with it in the following ways:
-* Stringified numbers (eg. `'2'`) should be treated as numbers
-* `NULL` should be treated as zero
+* Stringified numbers (eg. `'2'`) should be treated as numbers         //first for loop
+* `NULL` should be treated as zero              // switch statement
 * `undefined` values should be ignored
 * Empty string values (eg. `''`) should be ignored
 * Non-numeric values (eg. `'foo'`) should be ignored
